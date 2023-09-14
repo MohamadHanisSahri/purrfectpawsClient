@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import { Avatar, Link } from '@mui/material';
 import logo from './assets/logo.jpg';
 import axios from 'axios';
-import { redirect } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState('');
