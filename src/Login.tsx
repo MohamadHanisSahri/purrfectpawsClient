@@ -30,15 +30,14 @@ const Login = () => {
 
     const onClickLogIn = (url: string) => {
         console.log(username, password);
-        axios.post('https://localhost:7224/api/UserLogin/Login', {
+        axios.post('https://purrfectpawsapi2.azurewebsites.net/api/UserLogin/Login', {
             email: username,
             password: password
         })
             .then((response) => {
                 const token = response.data;
                 sessionStorage.setItem('token', token);
-                redirect(url);
-                //window.location.href = url;
+                window.location.href = url;
             })
             .catch((error) => {
                 console.log(error);
